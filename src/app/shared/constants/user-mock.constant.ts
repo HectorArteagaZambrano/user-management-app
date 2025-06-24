@@ -2,7 +2,7 @@ import { User } from "@shared/interfaces";
 
 export const USER_MOCK: User[] = [
     {
-        username: 'usuario123',
+        username: 'user123',
         name: 'Carlos Sánchez',
         image: 'https://i.pravatar.cc/150?u=usuario123',
         role: 'Frontend Developer'
