@@ -7,13 +7,13 @@ export const routes: Routes = [
     {
         path: 'auth',
         canMatch: [redirectIfAuthenticatedGuardFn],
-        loadChildren: () => import('./features/auth/auth.routes').then((m) => m.authRoutes)
+        loadChildren: () => import('@auth/auth.routes').then((r) => r.authRoutes)
     },
     {
         path: 'dashboard',
         component: LayoutComponent,
         canMatch: [authIsAuthenticatedGuardFn],
-        loadChildren: () => import('./features/dashboard/dashboard.routes').then((m) => m.dashboardRoutes)
+        loadChildren: () => import('@dashboard/dashboard.routes').then((r) => r.dashboardRoutes)
     },
     {
         path: '',

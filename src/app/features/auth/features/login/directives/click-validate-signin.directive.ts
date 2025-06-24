@@ -2,8 +2,9 @@ import { Directive, HostListener, inject } from '@angular/core';
 import { FormGroupDirective } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { filter, finalize, tap } from 'rxjs';
+import { finalize, of, switchMap, tap, timer } from 'rxjs';
 
+import { SIGNIN_USER_INVALID_CREDENTIALS } from '@auth/features/login/constants';
 import { LoginService } from '@auth/features/login/services/login.service';
 
 import { AuthResult } from '@shared/interfaces';
@@ -28,26 +29,31 @@ export class ClickValidateSigninDirective {
     protected onHandleClickValidateSignin(): void {
 
         const payload = this._formGroupDirective.form.value;
-        const invalidCredentialsMessage: string = 'Usuario o contraseña incorrectos. Por favor, verifica tus credenciales e intenta nuevamente.';
 
         this._spinnerService.onShowSpinner();
 
         this._loginService.onValidateLogin(payload)
             .pipe(
-                tap((response: AuthResult) => {
-
-                    if (!response.isAuthenticated) {
-                        this._snackBarService.onShowNotification(invalidCredentialsMessage);
-                        return;
-                    }
-
-                    this._sessionStorageAdapter.set('token', response);
-                    this._router.navigate(['./dashboard']);
-
-                }),
+                switchMap((response: AuthResult) => this.onHandleLoginResponse(response)),
                 finalize(() => this._spinnerService.onHideSpinner()))
             .subscribe();
 
     }
 
+    private onHandleLoginResponse(response: AuthResult) {
+
+        if (!response.isAuthenticated) {
+            this._snackBarService.onShowNotification(SIGNIN_USER_INVALID_CREDENTIALS);
+            return of(null);
+        }
+
+        return timer(1000)
+            .pipe(
+                tap(() => {
+                    this._sessionStorageAdapter.set('token', response);
+                    this._router.navigate(['./dashboard']);
+                })
+            );
+
+    }
 }

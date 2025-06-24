@@ -6,4 +6,6 @@ export const SIGNIN_USER_MOCK: SigninUser[] = [
     { username: 'dev_master', password: 'MySecretPwd3$' },
     { username: 'test_account', password: 'WeakPassword4%' },
     { username: 'admin_user', password: 'AdminPass5^' }
-];  
+];
+
+export const SIGNIN_USER_INVALID_CREDENTIALS = 'Usuario o contraseña incorrectos. Por favor, verifica tus credenciales e intenta nuevamente.';

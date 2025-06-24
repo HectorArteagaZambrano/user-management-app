@@ -79,8 +79,7 @@ export class TableUserComponent implements OnInit {
           this.dataSource.sort = this.sort;
           this.dataSource.paginator = this.paginator;
         }),
-        finalize(() => this.isLoading = false)
-      )
+        finalize(() => this.isLoading = false))
       .subscribe();
   }
 
