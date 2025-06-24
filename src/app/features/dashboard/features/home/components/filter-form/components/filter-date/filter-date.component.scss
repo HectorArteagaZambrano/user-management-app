@@ -1,0 +1,78 @@
+@use 'mixins/flex-layout-media-queries.mixin' as *;
+
+:host {
+    display: flex;
+    align-items: center;
+    flex: 1 1 10%;
+    gap: 1rem;
+    width: 100%;
+}
+
+.filters__date {
+
+    flex: 1;
+    width: 100%;
+    color: #353C40;
+    padding: .8rem 2.5rem .8rem 3.8rem;
+    border: 1px solid #F2F4F5;
+    border-radius: .8rem;
+    outline: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+
+    &::placeholder {
+        color: #3A354161;
+    }
+
+    &:focus {
+        border: 1px solid #155883;
+    }
+
+    &-label {
+        font-size: 1.3rem;
+        color: #353C40;
+        min-width: 7rem;
+        text-align: right;
+        font-weight: 500;
+    }
+
+    &-container {
+
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+    }
+
+    &-icon {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &--start {
+            left: 1.5rem;
+        }
+
+        &--end {
+            right: 1rem;
+        }
+    }
+
+}
+
+@include lt-lg {
+
+    .filters__date {
+
+        width: 100%;
+
+        &-label {
+            text-align: left;
+        }
+    }
+
+}

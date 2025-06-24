@@ -3,6 +3,19 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@env/*": ["src/environments/*"],
+      "@core/*":["src/app/core/*"],
+      "@shared/*":["src/app/shared/*"],
+      "@auth/*":["src/app/features/auth/*"],
+      "@dashboard/*":["src/app/features/dashboard/*"],
+      "@home/*":["src/app/features/dashboard/features/home/*"],
+      "@cats/*":["src/app/features/dashboard/features/cats/*"],
+      "@friends/*":["src/app/features/dashboard/features/friends/*"],
+      "@messages/*":["src/app/features/dashboard/features/messages/*"],
+      "@notifications/*":["src/app/features/dashboard/features/notifications/*"]
+    },
+    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,

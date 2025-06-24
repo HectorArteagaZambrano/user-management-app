@@ -1,0 +1,31 @@
+::ng-deep .mat-mdc-snack-bar-container .mat-mdc-snackbar-surface {
+  background: #F45A52;
+  box-shadow: none;
+  border-radius: 1rem;
+}
+
+::ng-deep .mdc-snackbar__label {
+  padding: .5rem;
+}
+
+.notifier {
+
+  display: grid;
+  grid-template-columns: 1fr repeat(1, auto) 1fr;
+  grid-column-gap: 5px;
+  justify-items: center;
+  align-items: center;
+
+  &__title {
+    font-size: 1.3rem;
+    color: #FFFFFF;
+    line-height: 1.3;
+    grid-column-start: 2;
+    margin-bottom: 0;
+  }
+
+  mat-icon {
+    color: white;
+  }
+
+}

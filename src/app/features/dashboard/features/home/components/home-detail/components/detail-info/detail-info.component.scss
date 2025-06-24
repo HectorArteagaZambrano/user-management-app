@@ -1,0 +1,46 @@
+@use 'mixins/flex-layout-media-queries.mixin' as *;
+
+.detail-info {
+
+    margin-top: 4rem;
+
+    &__row {
+        display: flex;
+        gap: 3rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+
+    &__field {
+        flex: 1;
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 1rem;
+        font-weight: 200;
+        color: #000000;
+        font-size: 1.5rem;
+    }
+
+    &__description {
+        width: 100%;
+        padding: 1.5rem;
+        border-radius: 8px;
+        font-weight: 200;
+        color: #989898;
+        background-color: #F9F9F9;
+        margin: 0;
+    }
+
+}
+
+@include lt-md {
+    .detail-info {
+        &__row {
+            display: flex;
+            gap: 2rem;
+            flex-direction: column;
+        }
+    }
+}

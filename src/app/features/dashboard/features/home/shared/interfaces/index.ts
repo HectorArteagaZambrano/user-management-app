@@ -1,0 +1,1 @@
+export * from '@home/shared/interfaces/employe.interface.interface';

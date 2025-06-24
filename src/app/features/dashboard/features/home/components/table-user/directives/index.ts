@@ -1,0 +1,1 @@
+export * from '@home/components/table-user/directives/click-redirection-detail.directive';

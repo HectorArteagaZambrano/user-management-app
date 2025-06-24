@@ -1,0 +1,1 @@
+export * from '@home/components/table-user/languages/english-paginator-intl';

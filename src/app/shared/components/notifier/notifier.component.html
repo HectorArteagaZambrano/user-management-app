@@ -1,0 +1,10 @@
+<section class="notifier">
+  <p class="notifier__title">{{ data.message }}</p>
+  <article class="notifier__button"> 
+    <button 
+      mat-icon-button 
+      (click)="snackBarRef.dismiss()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </article>
+</section>

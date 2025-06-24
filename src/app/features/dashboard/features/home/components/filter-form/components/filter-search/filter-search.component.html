@@ -1,0 +1,11 @@
+<input 
+    matInput 
+    [formControl]="control" 
+    placeholder="Find people" 
+    type="text" />
+<button
+    type="button"
+    [clickSeachEmployee]="control.value"
+    mat-flat-button>
+    SEARCH
+</button>

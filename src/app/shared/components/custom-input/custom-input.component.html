@@ -1,0 +1,17 @@
+<section 
+    class="form__group"
+    [typingDetectionStyle]="control">
+    <label 
+        class="form__group-label">
+        {{label}}
+    </label>
+    <input 
+        matInput 
+        [type]="type" 
+        class="form__group-input" 
+        [placeholder]="placeholder" 
+        [formControl]="control" />
+<ng-container *ngIf="control && (control.touched || control.dirty || (control.value && control.invalid))">
+    <app-custom-error [errors]="control.errors" />
+</ng-container>
+</section>

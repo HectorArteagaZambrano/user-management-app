@@ -1,0 +1,35 @@
+.login {
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__toggle {
+
+        align-self: flex-start;
+        margin-bottom: 1rem;
+
+        --mdc-switch-track-width: 43px;
+        --mdc-switch-track-height: 22px;
+        --mat-switch-label-text-color: #2D3748;
+        --mat-switch-selected-handle-size: 16px;
+        --mat-switch-unselected-handle-size: 16px;
+
+    }
+
+    &__button {
+        width: 100%;
+        padding: 2.2rem;
+        border-radius: 1.2rem;
+        font-size: 1.4rem;
+    }
+
+
+}
+
+:host ::ng-deep .mat-mdc-slide-toggle .mdc-switch:enabled+.mdc-label {
+    font-size: 1.2rem;
+    margin-left: .5rem;
+}

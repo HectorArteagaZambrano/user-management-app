@@ -1,0 +1,13 @@
+<section>
+  <form [formGroup]="form">
+    <app-filter-search formControlName="search" />
+    <app-filter-date
+      label="Date from" 
+      class="d-flex flex-column flex-md-row flex-lg-row align-items-start align-items-lg-center align-items-md-center" 
+      formControlName="dateFrom" />
+    <app-filter-date
+      label="Date To"  
+      class="d-flex flex-column flex-md-row flex-lg-row align-items-start align-items-lg-center align-items-md-center"
+      formControlName="dateTo" />
+  </form>
+</section>

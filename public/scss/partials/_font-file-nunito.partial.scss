@@ -1,0 +1,23 @@
+@use 'partials/font-weight.partial' as *;
+@use 'partials/font-family-nunito.partial' as *;
+
+@font-face {
+    font-family: $ff-nunito-light;
+    src: url("/fonts/nunito/Nunito-Light.ttf");
+    font-weight: $light-weight;
+    font-style: $normal-style;
+}
+
+@font-face {
+    font-family: $ff-nunito-regular;
+    src: url("/fonts/nunito/Nunito-Regular.ttf");
+    font-weight: $regular-weight;
+    font-style: $normal-style;
+}
+
+@font-face {
+    font-family: $ff-nunito-bold;
+    src: url("/fonts/nunito/Nunito-Bold.ttf");
+    font-weight: $bold-weight;
+    font-style: $normal-style;
+}

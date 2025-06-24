@@ -1,0 +1,29 @@
+@use 'mixins/flex-layout-media-queries.mixin' as *;
+
+section {
+    display: flex;
+    min-height: 100vh;
+    background: #ffffff;
+    padding: 3rem;
+}
+
+article {
+    flex-grow: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@include lt-sm {
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    article {
+        padding: 2rem 1rem;
+    }
+    
+}

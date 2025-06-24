@@ -1,0 +1,30 @@
+<form [formGroup]="loginForm" class="login__form">
+
+    <app-custom-input 
+        formControlName="username"
+        label="Username"
+        placeholder="Your username" />
+
+    <app-custom-input 
+        formControlName="password"
+        label="Password"
+        placeholder="Your password"
+        [type]="isHidePassword.value | togglePasswordType" />
+
+    <mat-slide-toggle 
+        color="primary" 
+        [hideIcon]="true" 
+        [formControl]="isHidePassword" 
+        class="login__toggle">
+        Show password
+    </mat-slide-toggle>
+
+    <button 
+        clickValidateSignin
+        class="login__button"
+        mat-flat-button
+        [disabled]="!loginForm.valid">
+        SIGN IN
+    </button>
+
+</form>

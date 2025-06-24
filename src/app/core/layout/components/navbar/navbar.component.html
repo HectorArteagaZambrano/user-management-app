@@ -1,0 +1,36 @@
+<nav class="navbar">
+  <section class="navbar__group">
+    @for (item of NAVBAR_ITEMS; track item.label) {
+      <button 
+        disableRipple
+        mat-icon-button 
+        class="navbar__button" 
+        [routerLink]="item.route">
+        
+        <article class="navbar__icon-wrapper">
+          <img
+            [src]="item.icon" 
+            [alt]="item.label"
+            class="navbar__icon" />
+          
+          @if ($first) {
+            <span class="navbar__badge"></span>
+          }
+        </article>
+
+        <span class="navbar__label">{{ item.label }}</span>
+      </button>
+    }
+
+    <button 
+      mat-icon-button 
+      class="navbar__button"
+      disableRipple>
+      <img 
+        src="https://i.pravatar.cc/24?u=profile" 
+        alt="Profile" 
+        class="navbar__avatar" />
+      <span class="navbar__label">Profile</span>
+    </button>
+  </section>
+</nav>

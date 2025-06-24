@@ -1,0 +1,10 @@
+<article class="sidebar-widget__group">
+    <h3 class="sidebar-widget__group-title">Groups</h3>
+    <ul class="sidebar-widget__group-list">
+        @for (group of GROUPS; track group) {
+        <li class="sidebar-widget__group-item">
+            🐱 <a href="javascript:void(0)">{{ group }}</a>
+        </li>
+        }
+    </ul>
+</article>

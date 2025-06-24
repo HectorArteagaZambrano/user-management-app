@@ -1,0 +1,116 @@
+<section class="table-user">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="position" sticky>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
+        <div class="table-user__header--sort">
+          <p>#</p>
+          <mat-icon svgIcon="table_sort" />
+        </div>
+      </th>
+      <td mat-cell [attr.data-column-name]="'#'" *matCellDef="let user; let i = index">
+        {{ i | tableIndex: paginator }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="avatar">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
+        <div class="table-user__header--sort">
+          <p>Full Name</p>
+          <mat-icon svgIcon="table_sort" />
+        </div>
+      </th>
+      <td mat-cell [attr.data-column-name]="'Full Name'" *matCellDef="let user">
+        <section class="table-user__avatar">
+          <img [src]="user.picture.thumbnail" [alt]="user.picture.thumbnail" />
+          {{ user.name | fullName }}
+        </section>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
+        <div class="table-user__header--sort">
+          <p>Email</p>
+          <mat-icon svgIcon="table_sort" />
+        </div>
+      </th>
+      <td mat-cell [attr.data-column-name]="'Email'" *matCellDef="let user">
+        {{ user.email }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="address">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
+        <div class="table-user__header--sort">
+          <p>Address</p>
+          <mat-icon svgIcon="table_sort" />
+        </div>
+      </th>
+      <td mat-cell [attr.data-column-name]="'Address'" *matCellDef="let user">
+        {{ user.location | fullAddress }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="phone">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
+        <div class="table-user__header--sort">
+          <p>Phone Number</p>
+          <mat-icon svgIcon="table_sort" />
+        </div>
+      </th>
+      <td mat-cell [attr.data-column-name]="'Phone Number'" *matCellDef="let user">
+        {{ user.phone }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="birthDate">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
+        <div class="table-user__header--sort">
+          <p>Birth Date</p>
+          <mat-icon svgIcon="table_sort" />
+        </div>
+      </th>
+      <td mat-cell [attr.data-column-name]="'Birth Date'" *matCellDef="let user">
+        {{ user.dob.date | date:'longDate' }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions" stickyEnd>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
+        <div class="table-user__header--sort">
+          <p>Actions</p>
+          <mat-icon svgIcon="table_sort" />
+        </div>
+      </th>
+      <td mat-cell [attr.data-column-name]="'Actions'" *matCellDef="let user">
+        <button 
+          mat-flat-button 
+          class="table-user__button">
+          <mat-icon svgIcon="table_view" /> View
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="DISPLAYED_COLUMNS" class="table-user__header"></tr>
+    <tr mat-row *matRowDef="let user; columns: DISPLAYED_COLUMNS;" [clickRedirectionDetail]="user" lass="table-user__row"></tr>
+
+  </table>
+
+  @if (isLoading) {
+  <mat-card class="table-user__loader">
+    <mat-progress-spinner 
+      mode="indeterminate" 
+      [diameter]="70" />
+  </mat-card>
+  }
+
+</section>
+
+<section [hidden]="isLoading">
+  <mat-paginator 
+    [pageSize]="10" 
+    [pageSizeOptions]="[5, 10, 20]" 
+    showFirstLastButtons>
+  </mat-paginator>
+</section>

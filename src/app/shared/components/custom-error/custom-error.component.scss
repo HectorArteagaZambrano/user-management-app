@@ -1,0 +1,6 @@
+@use './scss/message-animation.scss' as *;
+
+li {
+    list-style-type: none;
+    @include message-animation();
+}

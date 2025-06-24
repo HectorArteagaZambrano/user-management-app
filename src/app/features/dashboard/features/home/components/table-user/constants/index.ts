@@ -1,0 +1,1 @@
+export * from '@home/components/table-user/constants/table-user.constant';

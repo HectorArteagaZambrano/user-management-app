@@ -1,0 +1,1 @@
+export const DISPLAYED_COLUMNS: string[] = ['position', 'avatar', 'email', 'address', 'phone', 'birthDate', 'actions'];

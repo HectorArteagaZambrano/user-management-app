@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@use "main.scss" as *;
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem !important;
+    font-family: $ff-roboto-regular;
+    font-weight: $regular-weight;
+    font-style: $normal-style;
+    margin: 0;
+}

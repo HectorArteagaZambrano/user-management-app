@@ -1,0 +1,25 @@
+<label class="filters__date-label">{{label}}</label>
+<article class="filters__date-container">
+    <img 
+        src="images/dashboard/main/main-calendar.svg" 
+        class="filters__date-icon filters__date-icon--start"
+        (click)="picker.open()" />
+
+    <input 
+        matInput 
+        [matDatepicker]="picker" 
+        [formControl]="control" 
+        (click)="picker.open()" 
+        readonly
+        class="filters__date"
+        type="text" 
+        placeholder="dd / mm / aaaa" />
+
+    <img 
+        *ngIf="control.value" 
+        src="images/dashboard/main/main-close.svg" 
+        class="filters__date-icon filters__date-icon--end"
+        (click)="control.setValue(null)" />
+
+    <mat-datepicker #picker></mat-datepicker>
+</article>

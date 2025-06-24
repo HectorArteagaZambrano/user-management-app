@@ -1,0 +1,16 @@
+p {
+    margin-top: 2rem;
+    color: #A0AEC0;
+    font-family: 'Roboto-Light';
+    font-size: 1.4rem;
+}
+
+a {
+    font-family: 'Roboto-Medium';
+    text-decoration: none;
+    color: #4cd8c4;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

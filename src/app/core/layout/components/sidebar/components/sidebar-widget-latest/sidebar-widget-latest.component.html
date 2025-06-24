@@ -1,0 +1,8 @@
+<article class="sidebar-widget__latest">
+    <h3 class="sidebar-widget__latest-title">Latest</h3>
+    <ul class="sidebar-widget__latest-list">
+        @for (item of LATEST_ARTICLES; track item) {
+        <li class="sidebar-widget__latest-item">{{ item }}</li>
+        }
+    </ul>
+</article>

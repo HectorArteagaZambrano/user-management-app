@@ -1,0 +1,59 @@
+.navbar {
+
+    background-color: #f9fafb;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+
+    &__group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__button {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        padding: 3rem;
+        margin-inline: 1rem;
+        color: #666666;
+        cursor: pointer;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__icon-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    &__badge {
+        position: absolute;
+        right: -6px;
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        border: 4.5px solid #CC1016;
+        border-radius: 50%;
+    }
+
+    &__avatar {
+        border-radius: 50%;
+    }
+
+    &__label {
+        margin-top: 0.5rem;
+    }
+
+}
+
+:host ::ng-deep .mat-mdc-icon-button .mat-mdc-button-persistent-ripple {
+    border-radius: .8rem !important;
+}

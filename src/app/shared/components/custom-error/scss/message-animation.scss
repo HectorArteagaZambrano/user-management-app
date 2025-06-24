@@ -1,0 +1,22 @@
+@keyframes message-animation {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@mixin message-animation {
+    font-size: 1.3rem;
+    box-sizing: border-box;
+    color: #e53e3e;
+    padding: 0.2rem 0rem 0rem 0.7rem;
+    animation-name: message-animation;
+    animation-duration: 300ms;
+    text-align: left;
+    font-weight: 500;
+}

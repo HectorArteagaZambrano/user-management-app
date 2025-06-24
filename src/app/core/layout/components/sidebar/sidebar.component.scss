@@ -1,0 +1,18 @@
+@use 'mixins/flex-layout-media-queries.mixin' as *;
+
+aside {
+    width: 26rem;
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: .8rem;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    height: 100%;
+}
+
+@include lt-sm {
+    aside {
+        width: 100%;
+    }
+}

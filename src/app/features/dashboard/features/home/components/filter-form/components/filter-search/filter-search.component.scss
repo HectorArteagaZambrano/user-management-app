@@ -1,0 +1,68 @@
+@use 'mixins/flex-layout-media-queries.mixin' as *;
+
+:host {
+    display: flex;
+    align-items: center;
+    flex: 2 1 40%;
+    gap: 1rem;
+    width: 100%;
+
+    @include lt-md {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+input {
+
+    flex: 1;
+    width: 100%;
+    padding: .8rem 1.2rem;
+    border: 1px solid #3A35413B;
+    border-radius: .5rem;
+    outline: none;
+    font-size: 1.3rem;
+
+    &::placeholder {
+        color: #3A354161;
+    }
+
+    &:focus {
+        border: 1px solid #155883;
+    }
+
+}
+
+button {
+    box-shadow: 0px 4px 8px -4px #3A35416B;
+    background-color: #155883;
+    color: #FFFFFF;
+    outline: none;
+    padding-block: .7rem;
+    padding-inline: 3rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.4px;
+    font-family: 'Roboto-Regular';
+    cursor: pointer;
+    height: auto;
+    margin-left: 2rem;
+    margin-right: 8rem;
+}
+
+@include lt-lg {
+
+    input {
+        width: 100%;
+        margin-right: 2rem;
+    }
+
+    button {
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+
+}

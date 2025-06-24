@@ -1,0 +1,1 @@
+export * from '@home/components/table-user/pipes/table-index.pipe';

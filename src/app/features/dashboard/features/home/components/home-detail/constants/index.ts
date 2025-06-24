@@ -1,0 +1,1 @@
+export * from '@home/components/home-detail/constants/detail-galery-cat.constant';

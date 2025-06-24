@@ -1,0 +1,18 @@
+<section class="detail-galery__pets">
+    <h3 class="detail-galery__pets-title">My cats</h3>
+    <article class="detail-galery__pet-list">
+        @for (cat of CATS; track cat.name) {
+        <div class="detail-galery__pet-card">
+            <img class="detail-galery__pet-image" [src]="cat.src" [alt]="cat.name" />
+            <p class="detail-galery__pet-name">{{ cat.name }}</p>
+        </div>
+        }
+    </article>
+    <article class="detail-galery__action">
+        <button 
+            type="button"
+            class="detail-galery__button">
+            +Add Cat Lover Friend
+        </button>
+    </article>
+</section>

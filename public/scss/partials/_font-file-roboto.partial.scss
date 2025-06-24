@@ -1,0 +1,86 @@
+@use 'partials/font-weight.partial' as *;
+@use 'partials/font-family-roboto.partial' as *;
+
+@font-face {
+  font-family: $ff-roboto-thin;
+  src: url("/fonts/roboto/Roboto-Thin.ttf");
+  font-weight: $thin-weight;
+  font-style: $normal-style;
+}
+
+@font-face {
+  font-family: $ff-roboto-thin-italic;
+  src: url("/fonts/roboto/Roboto-ThinItalic.ttf");
+  font-weight: $thin-weight;
+  font-style: $italic-style;
+}
+
+@font-face {
+  font-family: $ff-roboto-light;
+  src: url("/fonts/roboto/Roboto-Light.ttf");
+  font-weight: $light-weight;
+  font-style: $normal-style;
+}
+
+@font-face {
+  font-family: $ff-roboto-light-italic;
+  src: url("/fonts/roboto/Roboto-LightItalic.ttf");
+  font-weight: $light-weight;
+  font-style: $italic-style;
+}
+
+@font-face {
+  font-family: $ff-roboto-regular;
+  src: url("/fonts/roboto/Roboto-Regular.ttf");
+  font-weight: $regular-weight;
+  font-style: $normal-style;
+}
+
+@font-face {
+  font-family: $ff-roboto-italic;
+  src: url("/fonts/roboto/Roboto-Italic.ttf");
+  font-weight: $regular-weight;
+  font-style: $italic-style;
+}
+
+@font-face {
+  font-family: $ff-roboto-medium;
+  src: url("/fonts/roboto/Roboto-Medium.ttf");
+  font-weight: $medium-weight;
+  font-style: $normal-style;
+}
+
+@font-face {
+  font-family: $ff-roboto-medium-italic;
+  src: url("/fonts/roboto/Roboto-MediumItalic.ttf");
+  font-weight: $medium-weight;
+  font-style: $italic-style;
+}
+
+@font-face {
+  font-family: $ff-roboto-bold;
+  src: url("/fonts/roboto/Roboto-Bold.ttf");
+  font-weight: $bold-weight;
+  font-style: $normal-style;
+}
+
+@font-face {
+  font-family: $ff-roboto-bold-italic;
+  src: url("/fonts/roboto/Roboto-BoldItalic.ttf");
+  font-weight: $bold-weight;
+  font-style: $italic-style;
+}
+
+@font-face {
+  font-family: $ff-roboto-black;
+  src: url("/fonts/roboto/Roboto-Black.ttf");
+  font-weight: $black-weight;
+  font-style: $normal-style;
+}
+
+@font-face {
+  font-family: $ff-roboto-black-italic;
+  src: url("/fonts/roboto/Roboto-BlackItalic.ttf");
+  font-weight: $black-weight;
+  font-style: $italic-style;
+}

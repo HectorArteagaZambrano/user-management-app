@@ -1,0 +1,71 @@
+@use 'mixins/flex-layout-media-queries.mixin' as *;
+
+.detail-galery {
+
+    &__pets {
+        margin-top: 4rem;
+    }
+
+    &__pets-title {
+        margin-bottom: 1rem;
+        font-weight: 200;
+    }
+
+    &__pet-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    &__pet-card {
+        overflow: hidden;
+    }
+
+    &__pet-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    &__pet-name {
+        text-align: left;
+        font-weight: 500;
+        color: #989898;
+        font-size: 1.5rem;
+        font-weight: 200;
+        margin-top: 1.2rem;
+        margin-bottom: 0rem;
+    }
+
+    &__action {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 2rem;
+    }
+
+    &__button {
+
+        margin-top: 1rem;
+        background-color: #e6edf6;
+        border: none;
+        padding: 1.2rem 3rem 1.2rem 1.5rem;
+        border-radius: 8px;
+        color: #155883;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: #d4e4f2;
+        }
+
+    }
+}
+
+@include lt-md {
+    .detail-galery {
+        &__action {
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+<section class="detail-info">
+    <article class="detail-info__row">
+        <div class="detail-info__field">
+            <label class="detail-info__label">Email</label>
+            <p class="detail-info__description">{{data.email}}</p>
+        </div>
+        <div class="detail-info__field">
+            <label class="detail-info__label">Birth Date</label>
+            <p class="detail-info__description">{{data.dob.date | date:'longDate'}}</p>
+        </div>
+    </article>
+
+    <article class="detail-info__row">
+        <div class="detail-info__field">
+            <label class="detail-info__label">Address</label>
+            <p class="detail-info__description">{{data.location | fullAddress}}</p>
+        </div>
+        <div class="detail-info__field">
+            <label class="detail-info__label">Phone Number</label>
+            <p class="detail-info__description">{{data.phone}}</p>
+        </div>
+    </article>
+</section>
