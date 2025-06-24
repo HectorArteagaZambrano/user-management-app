@@ -101,8 +101,7 @@ export class TableUserComponent implements OnInit {
 
     this.dataSource.filterPredicate = (user: Employee, filter: string): boolean => {
 
-      const search: string = filter.trim().toLowerCase();
-
+      const search: string = filter.toLowerCase();
       const fullName: string = `${user.name.first} ${user.name.last}`.toLowerCase();
 
       return (

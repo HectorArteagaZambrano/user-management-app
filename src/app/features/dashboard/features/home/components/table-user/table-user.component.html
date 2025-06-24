@@ -92,8 +92,17 @@
       </td>
     </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="DISPLAYED_COLUMNS" class="table-user__header"></tr>
-    <tr mat-row *matRowDef="let user; columns: DISPLAYED_COLUMNS;" [clickRedirectionDetail]="user" lass="table-user__row"></tr>
+    <tr 
+      mat-header-row 
+      *matHeaderRowDef="DISPLAYED_COLUMNS" 
+      class="table-user__header"></tr>
+    <tr 
+      mat-row 
+      *matRowDef="let user; 
+      columns: DISPLAYED_COLUMNS;" 
+      [clickRedirectionDetail]="user" 
+      class="table-user__row">
+    </tr>
 
   </table>
 
